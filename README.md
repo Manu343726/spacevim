@@ -12,5 +12,5 @@ $ curl -sLf https://spacevim.org/install.sh | bash
 Then clone this repository as your `.SpaceVim.d` directory:
 
 ``` shell
-$ git clone https://github.com/Manu343726/spacevim $HOME/.SpaceVim.d/:w
+$ git clone https://github.com/Manu343726/spacevim $HOME/.SpaceVim.d/
 ```
