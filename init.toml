@@ -8,94 +8,120 @@
 
 # All SpaceVim option below [option] section
 [options]
-    bootstrap_before = 'myspacevim#before'
-    bootstrap_after = 'myspacevim#after'
+bootstrap_before = 'myspacevim#before'
+bootstrap_after = 'myspacevim#after'
 
-    # set spacevim theme. by default colorscheme layer is not loaded,
-    # if you want to use more colorscheme, please load the colorscheme
-    # layer
-    colorscheme = "molokai"
-    colorscheme_bg = "dark"
-    # Disable guicolors in basic mode, many terminal do not support 24bit
-    # true colors
-    enable_guicolors = true
-    # Disable statusline separator, if you want to use other value, please
-    # install nerd fonts
-    statusline_separator = "arrow"
-    statusline_iseparator = "arrow"
-    buffer_index_type = 4
-    enable_tabline_filetype_icon = true
-    enable_statusline_mode = false
-    enable_ycm = false
-    enable_neomake = false
-    enable_ale = true
-    autocomplete_method = 'coc'
-    filemanager = 'nerdtree'
-    default_indent = 4
-
-[[layers]]
-  name = "core#statusline"
-
-[[custom_plugins]]
-  repo = 'rdnetto/YCM-Generator'
-  on_cmd = 'YcmGenerateConfig'
-
-[[custom_plugins]]
-  repo = 'Yohannfra/Vim-Goto-Header'
-  on_cmd = ['GoToHeaderSwitch']
-
-[[custom_plugins]]
-  repo = 'liuchengxu/vista.vim'
-  on_cmd = ['Vista', 'Vista!!']
-
-[[custom_plugins]]
-  repo = 'cdelledonne/vim-cmake'
-
-[[custom_plugins]]
-  repo = 'wellle/context.vim'
+# set spacevim theme. by default colorscheme layer is not loaded,
+# if you want to use more colorscheme, please load the colorscheme
+# layer
+colorscheme = "molokai"
+colorscheme_bg = "dark"
+# Disable guicolors in basic mode, many terminal do not support 24bit
+# true colors
+enable_guicolors = true
+# Disable statusline separator, if you want to use other value, please
+# install nerd fonts
+statusline_separator = "arrow"
+statusline_iseparator = "arrow"
+buffer_index_type = 4
+enable_tabline_filetype_icon = true
+enable_statusline_mode = false
+enable_ycm = false
+enable_neomake = false
+enable_ale = true
+autocomplete_method = 'coc'
+filemanager = 'nerdtree'
+default_indent = 4
 
 [[layers]]
-  name = 'autocomplete'
-  auto_completion_return_key_behavior = "complete"
-  auto_completion_tab_key_behavior = "smart"
+name = "core#statusline"
 
 [[layers]]
-  name = 'shell'
-  default_position = 'top'
-  default_height = 30
+name = 'autocomplete'
+auto_completion_return_key_behavior = "complete"
+auto_completion_tab_key_behavior = "smart"
 
 [[layers]]
-  name = 'colorscheme'
+name = 'shell'
+default_position = 'top'
+default_height = 30
+
+[[layers]]
+name = 'colorscheme'
 
 [[laters]]
-  name = 'format'
+name = 'format'
 
 [[layers]]
-  name = 'lsp'
+name = 'lsp'
 
 [[custom_plugins]]
-  repo = 'jackguo380/vim-lsp-cxx-highlight'
+repo = 'jackguo380/vim-lsp-cxx-highlight'
 
 [[layers]]
-  name = 'lang#python'
+name = 'lang#python'
+format_on_save = true
 
 [[layers]]
-  name = 'fzf'
+name = 'fzf'
 
 [[layers]]
-  name = 'gtags'
+name = 'gtags'
 
 [[layers]]
-  name = 'debug'
+name = 'debug'
 
 [[layers]]
-  name = 'VersionControl'
+name = 'VersionControl'
 
 [[layers]]
-  name = 'git'
+name = 'git'
+git-plugin = 'gina'
 
 [[layers]]
-  name = 'github'
+name = 'github'
 
 [[layers]]
-  name = 'foldsearch'
+name = 'foldsearch'
+
+[[custom_plugins]]
+repo = 'rdnetto/YCM-Generator'
+on_cmd = 'YcmGenerateConfig'
+
+[[custom_plugins]]
+repo = 'Yohannfra/Vim-Goto-Header'
+on_cmd = ['GoToHeaderSwitch']
+
+[[custom_plugins]]
+repo = 'liuchengxu/vista.vim'
+on_cmd = ['Vista', 'Vista!!']
+
+[[custom_plugins]]
+repo = 'cdelledonne/vim-cmake'
+
+[[custom_plugins]]
+repo = 'wellle/context.vim'
+
+[[custom_plugins]]
+repo = 'sk1418/QFGrep'
+
+[[custom_plugins]]
+repo = 'chiel92/vim-autoformat'
+
+[[custom_plugins]]
+repo = 'martinda/Jenkinsfile-vim-syntax'
+
+[[custom_plugins]]
+repo = 'modille/groovy.vim'
+
+[[custom_plugins]]
+repo = 'embear/vim-localvimrc'
+
+#[[custom_plugins]]
+#repo = 'reedes/vim-pencil'
+
+[[custom_plugins]]
+repo = 'plasticboy/vim-markdown'
+
+[[custom_plugins]]
+repo = 'mitsuhiko/vim-jinja'

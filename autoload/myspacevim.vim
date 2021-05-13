@@ -4,11 +4,29 @@ function! myspacevim#before()
     let g:vista_default_executive = 'coc'
     let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
     let g:cmake_build_options = ['-j$(nproc --all)']
+
+    let g:autoformat_autoindent = 0
+    let g:autoformat_retab = 0
+    let g:autoformat_remove_trailing_spaces = 0
+
+    augroup Autoformat
+        au BufWrite * :Autoformat
+        autocmd FileType dockerfile,markdown let b:autoformat_autoindent=0
+    augroup END
+
+    let g:localvimrc_ask = 0
+
+    augroup pencil
+        autocmd!
+        autocmd FileType markdown call pencil#init()
+    augroup END
+
+    let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'c', 'cpp', 'cmake']
 endfunction
 
 function! myspacevim#after()
-    nnoremap <silent> <F4> :GotoHeaderSwitch <CR>
-    imap <silent> <F4> <Esc>:GotoHeaderSwitch <CR>
+    nnoremap <silent> <F4> :CocCommand clangd.switchSourceHeader  <CR>
+    imap <silent> <F4> <Esc>:CocCommand clangd.switchSourceHeader <CR>
     let g:goto_header_associate_cpp_h = 1
     let g:goto_header_use_find = 1
 
